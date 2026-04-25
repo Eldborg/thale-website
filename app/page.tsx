@@ -1,65 +1,133 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <main
+      style={{
+        position: "relative",
+        width: "100vw",
+        height: "100vh",
+        overflow: "hidden",
+        background: "#ffffff",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      {/* Hero sculptural image — bottom-left (blue/steel tinted) */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: "-8%",
+          left: "-4%",
+          width: "42vw",
+          maxWidth: "600px",
+          aspectRatio: "1 / 1",
+          pointerEvents: "none",
+          userSelect: "none",
+        }}
+      >
+        <img
+          src="/hero.png"
+          alt=""
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "contain",
+            objectPosition: "center",
+          }}
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </div>
+
+      {/* Hero sculptural image — top-right (desaturated, lighter) */}
+      <div
+        style={{
+          position: "absolute",
+          top: "-12%",
+          right: "-6%",
+          width: "38vw",
+          maxWidth: "520px",
+          aspectRatio: "1 / 1",
+          pointerEvents: "none",
+          userSelect: "none",
+          filter: "saturate(0) brightness(1.05)",
+          opacity: 0.85,
+        }}
+      >
+        <img
+          src="/hero.png"
+          alt=""
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "contain",
+            objectPosition: "center",
+            transform: "rotate(180deg) scaleX(-1)",
+          }}
+        />
+      </div>
+
+      {/* Center content */}
+      <div
+        style={{
+          position: "relative",
+          zIndex: 10,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          textAlign: "center",
+        }}
+      >
+        {/* Coming 2025 */}
+        <p
+          style={{
+            fontFamily: "'Inter', sans-serif",
+            fontSize: "clamp(13px, 1.4vw, 16px)",
+            fontWeight: 400,
+            color: "#1a1a1a",
+            letterSpacing: "0.01em",
+            marginBottom: "clamp(18px, 3vw, 36px)",
+          }}
+        >
+          Coming 2025
+        </p>
+
+        {/* Rethink */}
+        <h1
+          style={{
+            fontFamily: "'Cormorant Garant', serif",
+            fontSize: "clamp(68px, 11vw, 160px)",
+            fontWeight: 400,
+            color: "#0d1117",
+            lineHeight: 0.92,
+            letterSpacing: "-0.01em",
+          }}
+        >
+          Rethink
+        </h1>
+
+        {/* Divider line */}
+        <div
+          style={{
+            width: "clamp(44px, 5.5vw, 72px)",
+            height: "1px",
+            background: "#1a1a1a",
+            margin: "clamp(18px, 2.8vw, 30px) auto",
+          }}
+        />
+
+        {/* Money */}
+        <h2
+          style={{
+            fontFamily: "'Cormorant Garant', serif",
+            fontSize: "clamp(68px, 11vw, 160px)",
+            fontWeight: 400,
+            color: "#0d1117",
+            lineHeight: 0.92,
+            letterSpacing: "-0.01em",
+          }}
+        >
+          Money
+        </h2>
+      </div>
+    </main>
   );
 }
