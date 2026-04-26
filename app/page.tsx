@@ -12,44 +12,37 @@ export default function Home() {
         justifyContent: "center",
       }}
     >
-      {/* Hero sculptural image — bottom-left (blue/steel tinted) */}
+      {/* Sculptural image — bottom-left (full color, blue/steel) */}
       <div
         style={{
           position: "absolute",
-          bottom: "-8%",
-          left: "-4%",
-          width: "42vw",
-          maxWidth: "600px",
+          bottom: "-10%",
+          left: "-5%",
+          width: "44vw",
+          maxWidth: "640px",
           aspectRatio: "1 / 1",
           pointerEvents: "none",
-          userSelect: "none",
         }}
       >
         <img
           src="/hero.png"
           alt=""
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "contain",
-            objectPosition: "center",
-          }}
+          style={{ width: "100%", height: "100%", objectFit: "contain" }}
         />
       </div>
 
-      {/* Hero sculptural image — top-right (desaturated, lighter) */}
+      {/* Sculptural image — top-right (greyscale, rotated) */}
       <div
         style={{
           position: "absolute",
-          top: "-12%",
-          right: "-6%",
-          width: "38vw",
-          maxWidth: "520px",
+          top: "-14%",
+          right: "-7%",
+          width: "40vw",
+          maxWidth: "560px",
           aspectRatio: "1 / 1",
           pointerEvents: "none",
-          userSelect: "none",
-          filter: "saturate(0) brightness(1.05)",
-          opacity: 0.85,
+          filter: "saturate(0) brightness(1.08)",
+          opacity: 0.9,
         }}
       >
         <img
@@ -59,7 +52,6 @@ export default function Home() {
             width: "100%",
             height: "100%",
             objectFit: "contain",
-            objectPosition: "center",
             transform: "rotate(180deg) scaleX(-1)",
           }}
         />
@@ -76,57 +68,29 @@ export default function Home() {
           textAlign: "center",
         }}
       >
-        {/* Coming 2025 */}
+        {/* "Coming 2025" label */}
         <p
           style={{
-            fontFamily: "'Inter', sans-serif",
-            fontSize: "clamp(13px, 1.4vw, 16px)",
+            fontFamily: "'Geist', 'Inter', sans-serif",
+            fontSize: "clamp(12px, 1.3vw, 16px)",
             fontWeight: 400,
-            color: "#1a1a1a",
-            letterSpacing: "0.01em",
-            marginBottom: "clamp(18px, 3vw, 36px)",
+            color: "rgba(0, 0, 0, 0.9)",
+            letterSpacing: "0em",
+            marginBottom: "clamp(20px, 3.5vw, 44px)",
           }}
         >
           Coming 2025
         </p>
 
-        {/* Rethink */}
-        <h1
+        {/* Exact heading SVG from Framer — "Rethink / Money" */}
+        <img
+          src="/heading.svg"
+          alt="Rethink Money"
           style={{
-            fontFamily: "'Cormorant Garant', serif",
-            fontSize: "clamp(68px, 11vw, 160px)",
-            fontWeight: 400,
-            color: "#0d1117",
-            lineHeight: 0.92,
-            letterSpacing: "-0.01em",
-          }}
-        >
-          Rethink
-        </h1>
-
-        {/* Divider line */}
-        <div
-          style={{
-            width: "clamp(44px, 5.5vw, 72px)",
-            height: "1px",
-            background: "#1a1a1a",
-            margin: "clamp(18px, 2.8vw, 30px) auto",
+            width: "clamp(280px, 38vw, 520px)",
+            height: "auto",
           }}
         />
-
-        {/* Money */}
-        <h2
-          style={{
-            fontFamily: "'Cormorant Garant', serif",
-            fontSize: "clamp(68px, 11vw, 160px)",
-            fontWeight: 400,
-            color: "#0d1117",
-            lineHeight: 0.92,
-            letterSpacing: "-0.01em",
-          }}
-        >
-          Money
-        </h2>
       </div>
     </main>
   );
