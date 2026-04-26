@@ -79,7 +79,7 @@ export default function Home() {
             marginBottom: "clamp(20px, 3.5vw, 44px)",
           }}
         >
-          Coming 2025
+          Coming 2027
         </p>
 
         {/* Exact heading SVG from Framer — "Rethink / Money" */}
